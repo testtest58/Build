@@ -36,3 +36,7 @@ jobs:
         uses: ilammy/msvc-dev-cmd@v1.10.0
       - name: GG
         run:  .\SetUp.bat
+      - name: gg
+        run:  .\GenerateProjectFiles.bat
+      - name: build
+        run: MSBuild.exe UE4.sln /p:Configuration="Development Editor" /p:Platform="Win64" /m
